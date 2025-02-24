@@ -1,0 +1,16 @@
+<div id=titlePageContainer class="text-white">
+    <div class="fs-1 d-flex flex-row align-items-center py-3 bg-grey">
+        <button class="d-flex justify-content-center align-items-center h-100" mat-icon-button (click)="opened=!opened"><mat-icon class="fs-4 h-100 text-white">menu</mat-icon></button>
+        <h2 class="text-white ms-2 m-0">Tumblin</h2>
+    </div>
+    <mat-sidenav-container class="h-100">
+        <mat-sidenav [(opened)]="opened" mode="side">
+          <div class="d-flex flex-column h-100">
+            <a mat-stroked-button class="fs-5 py-4 gy-xl-2 text-start justify-content-center border-1 rounded-0" routerLink="/">Home</a>
+            <a mat-stroked-button class="fs-5 py-4 gy-xl-2 text-start justify-content-center border-1 rounded-0" routerLink="projects">Projects</a>
+            <a mat-stroked-button class="fs-5 py-4 gy-xl-2 text-start justify-content-center border-1 rounded-0" routerLink="about">About</a>
+          </div>
+        </mat-sidenav>
+        <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
